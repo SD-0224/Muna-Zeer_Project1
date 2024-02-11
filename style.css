@@ -44,6 +44,7 @@ body {
   border: 1px solid var(--lines-color);
   padding: 5px;
   border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .header-pg {
   display: flex;
@@ -56,6 +57,7 @@ body {
 }
 .subContainer {
   background-color: var(--bg_body);
+  height: 100%;
 }
 .search-content {
   z-index: 20;
@@ -66,8 +68,9 @@ body {
   background-color: var(--bg_default);
   border-radius: 5px;
   margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: var(--bg_default);
-  
+  /* box-shadow: 00 0 10; */
 }
 .filter button span {
   display: flex;
@@ -85,7 +88,6 @@ body {
   margin-right: 15px;
   border: none;
   padding-right: 50px;
-  
 }
 
 .sort-two select {
@@ -99,8 +101,8 @@ body {
 }
 .sort-one h5,
 .sort-two h5 {
-    margin: 0; 
-    padding: 0; 
+  margin: 0;
+  padding: 0;
 }
 
 .topics {
@@ -158,4 +160,40 @@ body {
   -webkit-clip-path: var(--p);
   clip-path: var(--p);
   content: "";
+}
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+/* margin: 20px; */
+gap: 30;
+}
+img {
+  width: 100%;
+  object-fit: cover;
+  /* border-radius: 10px; */
+  /* height: 50%; */
+}
+
+.card-container {
+  width: 200px;
+  margin-left: 30px;
+  background-color: var(--bg_default);
+  /* border: 1px solid #dc143c; */
+  display: flex;
+  border-radius: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-content{
+  padding: 10px;
+  margin: 5px;
+}
+.author-evaluate{
+  padding: 10px;
+
+font-size: 15px;}
+.author-evaluate ion-icon {
+  color: rgb(243, 166, 11); 
 }
