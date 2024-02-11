@@ -42,13 +42,13 @@ body {
 .btns > button {
   background-color: var(--bg_default);
   border: 1px solid var(--lines-color);
-  /* z-index: -1; */
   padding: 5px;
   border-radius: 5px;
 }
 .header-pg {
   display: flex;
   justify-content: center;
+  margin: 30px;
 }
 .header-pg .welcome {
   color: var(--brand-secondary);
@@ -58,35 +58,104 @@ body {
   background-color: var(--bg_body);
 }
 .search-content {
+  z-index: 20;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   background-color: var(--bg_default);
   border-radius: 5px;
-  /* border:1px solid  #DC143C; */
-  margin: 30px;
-  padding: 10px;
+  margin: 20px;
+  background-color: var(--bg_default);
+  
 }
 .filter button span {
   display: flex;
   flex-direction: row;
-  padding: 4px;
+  justify-content: center;
 }
-.sort{
-    display: flex;
-    flex-direction: row;  
-     background-color: red; 
+
+.sort {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
-.sort1{
-background-color: #8f3030;border-left: 1px solid var(--bg_default);
-margin-right: 15px;
+.sort-one select {
+  border-left: 1px solid var(--bg_default);
+  margin-right: 15px;
+  border: none;
+  padding-right: 50px;
+  
 }
-.sort2{
-    
+
+.sort-two select {
+  border: none;
+  padding-right: 50px;
 }
+.sort-one,
+.sort-two {
+  border-left: 1px solid var(--lines-color);
+  padding-left: 10px;
+}
+.sort-one h5,
+.sort-two h5 {
+    margin: 0; 
+    padding: 0; 
+}
+
 .topics {
   margin: 30px;
   font-weight: bold;
 }
 
+.main-header {
+  background-color: var(--bg_default);
+  display: flex;
+  vertical-align: top;
+  width: 100%;
+  z-index: 9;
+}
+
+.triangle {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: start;
+}
+.triangle-reverse {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: end;
+}
+
+.triangle-reverse::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--brand-secondary);
+  color: var(--brand-secondary);
+  --p: polygon(0 0, 100% 0, 100% 100%);
+  -webkit-clip-path: var(--p);
+  clip-path: var(--p);
+  content: "";
+}
+.triangle::before {
+  position: absolute;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--brand-primary);
+  color: var(--brand-primary);
+  --p: polygon(100% 0, 0 0, 0 100%);
+  -webkit-clip-path: var(--p);
+  clip-path: var(--p);
+  content: "";
+}
