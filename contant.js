@@ -1,4 +1,4 @@
-[
+const data=[
     {
       "category": "Web Development Languages",
       "rating": 4.1,
@@ -675,3 +675,4 @@
       "id": 39
     }
   ]
+  export default data;
