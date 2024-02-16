@@ -1,9 +1,44 @@
 import data from "./contant.js";
+
+const toggleButton = document.getElementById("toggleDark");
+
+toggleButton.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+  const headerContainer=document.querySelector("header-pg");
+  headerContainer.classList.toggle("dark-mode");
+
+  const cardContainer=document.querySelector("card-container");
+  cardContainer.classList.toggle("dark-mode");
+
+  const subContainer=document.querySelector("subContainer");
+  subContainer.classList.toggle("dark-mode");
+
+  const searchContainer=document.querySelector("search-content");
+  searchContainer.classList.toggle("dark-mode");
+  const cardContent=document.querySelector("card-container");
+  cardContent.classList.toggle("dark-mode");
+
+  const footerContainer=document.querySelector("footer");
+  footerContainer.classList.toggle("dark-mode");
+  const Container=document.querySelector("container");
+  Container.classList.toggle("dark-mode");
+  const triangleRevers=document.querySelector("triangleReverse");
+  triangleRevers.classList.toggle("dark-mode");
+  const select=document.querySelector("select");
+  select.classList.toggle("dark-mode");
+  const button=document.querySelector("button");
+  button.classList.toggle("dark-mode");
+
+});
+
 const cardTemplate = `
 <div class="card-container">
 <div class="image">
 <img src="./images/{{image}}" alt="{{imageExists ? 'course image' : ''}}"></div>
-<div class="card-content">{{category}}</div>
+<div class="card-content">
+<span class="category">{{category}}</span><br>
+<span class="topic">{{topic}}</span>
+</div>
 <div class="author-evaluate">
 <p>
 {{ratingStars}} </p>
@@ -34,6 +69,7 @@ const generateCards = (data) => {
       return cardTemplate
         .replace("{{image}}", item.image)
         .replace("{{category}}", item.category)
+        .replace("{{topic}}", item.topic)
         .replace("{{name}}", item.name)
         .replace("{{ratingStars}}", "⭐".repeat(Math.round(item.rating)))
         .replace("{{imageExists}}", !!item.image ? "course-image" : " ");

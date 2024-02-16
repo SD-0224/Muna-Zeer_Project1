@@ -14,20 +14,20 @@
     <script type="module" src="script.js"></script>
     </head>
   <body>
-    <hr />
+    <!-- <hr /> -->
     <div class="container">
       <header class="header-content">
         <div class="header-title">Web Topics</div>
         <div class="btns">
           <button><ion-icon name="heart-outline"></ion-icon> Dark Mode</button>
-          <button><ion-icon name="moon-outline"></ion-icon> Favorites</button>
+          <button id="toggleDark" class="toggleDark"><ion-icon name="moon-outline"></ion-icon> Favorites</button>
         </div>
       </header>
 
       <header class="main-header">
         <div class="triangle"></div>
 
-        <div class="triangle-reverse"></div>
+        <div class="triangleReverse"></div>
       </header>
 
       <div class="header-pg">
@@ -41,8 +41,11 @@
         <br />
         <div class="search-content">
           <div class="filter">
-            <ion-icon name="search-outline"></ion-icon>
-            <span>search the website</span>
+            <span >
+
+              <ion-icon name="search-outline"></ion-icon>
+            </span>
+            <span class="search-text">&nbsp;&nbsp; Search the website</span>
           </div>
           <div class="sort">
             <div class="sort-one">
@@ -62,25 +65,10 @@
         <p class="topics">"24" web Topics found</p>
      
         <div class="cards-container" id="cardsContainer">
-
-        <!-- <div class="card-container">
-          <div class="image">
-            <img src="./images/vuejs.jpeg" alt="course">
-          </div>
-          <div class="card-content" id="cards-container">Web Development Languages</div>
-          <div class="author-evaluate">
-            <ion-icon name="star-outline" class="icon-fill"></ion-icon>
-            <ion-icon name="star-outline" class="icon-fill"></ion-icon>
-            <ion-icon name="star-outline" class="icon-fill"></ion-icon>
-            <ion-icon name="star-outline" class="icon-fill"></ion-icon>
-            <ion-icon name="star-outline"></ion-icon>
-
-          <p>  Author: Emily Smith</p>
-          </div>
-        </div> -->
       
         </div>
     
+        <footer>Developed with <ion-icon name="heart"></ion-icon> &copy; 2024</footer>
       </div>
     </div>
     <script
