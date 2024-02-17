@@ -23,18 +23,6 @@ body {
 --heart-color-dark: #DC143C;
 }
 
-/*Dark Mode*/
-/* :root{
-    --brand-primary: #0768AC;
---brand-secondary: #03C180;
---bg_default: #1A1A1A;
---bg_body: #282828;
---lines-color: #000000;
---body-text: #EDEDED;
---heart-color: #DC143C;} */
-/* .container{
-    display:flex;
-} */
 .header-content {
   display: flex;
   flex-wrap: wrap;
@@ -258,4 +246,31 @@ color: var(--heart-color);
   background-color: var(--lines-color-dark);
   color: var(--body-text-dark);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 390px) {
+  .btns button {
+    padding: 8px; 
+    font-size: 0;
+  }
+  .btns button ion-icon {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 10px;
+  }
+  .cards-container{
+    display: flex;
+    flex-direction: column;
+  }
+.sort{
+  flex-direction: row;
+  text-align: left;
+}
+#sort-select{
+  padding: 10px;
+  display: flex;
+  /* justify-content: flex-start; */
+  
+}
+
 }
