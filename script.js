@@ -29,6 +29,9 @@ toggleButton.addEventListener("click", function () {
   const button=document.querySelector("button");
   button.classList.toggle("dark-mode");
 
+
+
+
 });
 
 const cardTemplate = `
@@ -79,3 +82,39 @@ const generateCards = (data) => {
 
 const cardsContainer = document.getElementById("cardsContainer");
 cardsContainer.innerHTML = generateCards(data);
+
+
+
+
+
+const createCards = (data) => {
+  const favoritesContainer = document.getElementById("favoritesContainer");
+favoritesContainer.innerHTML += `
+<div class="small-cards">
+<img class="img-heart" src="./images/${data.image} "alt="favorite-course">
+<div class="card-info">
+  <h3>${data.topic}</h3>
+  <p>Rating: rating</p>
+</div>
+</div>
+  `;
+  return favoritesContainer;
+}
+
+const displayCard = (container, data) => {
+  container.innerHTML = "";
+  if (!Array.isArray(data)) {
+    return true;
+  }
+  container.innerHTML+='<p class="topic-card">My Favourite Topics</p>';
+  data.forEach((item) => {
+    const card = createCards(item);
+  });
+}
+
+document.getElementById("favorite-button").addEventListener("click", function() {
+  favoritesContainer.classList.toggle("hidden");
+  const filterItems = data.filter(item => item.id == 7 || item.id == 5);
+  console.log("filterItems", filterItems);
+  displayCard(favoritesContainer, filterItems);
+});
