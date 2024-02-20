@@ -51,30 +51,38 @@ const cardTemplate = `
 </div>
 `;
 
-const generateAllRating = (star) => {
-  //filled stars
-  const filled = Math.round(star);
-  //empty stars
-  const emptyStar = 5 - filled;
-  const starIcon =
-    '<ion-icon name="star-outline" class="icon-fill"></ion-icon>'.repeat(
-      filled
-    );
-  const emptyStarIcon =
-    '<ion-icon name="star-outline" class="icon-fill"></ion-icon>'.repeat(
-      starIcon
-    );
-  return starIcon + emptyStarIcon;
+const generateAllRating = (rating) => {
+  const filledStars = Math.min(Math.round(rating), 5); 
+  const emptyStars = Math.max(0, 5 - filledStars); 
+
+  const ratingIcon = '<ion-icon name="star" class="icon-fill"></ion-icon>';
+  
+  let ratingIcons = '';
+  
+  // Add filled stars
+  ratingIcons += ratingIcon.repeat(filledStars);
+  
+  // Add empty stars
+  ratingIcons += '<ion-icon name="star-outline" class="icon-fill"></ion-icon>'.repeat(emptyStars);
+  
+  return ratingIcons;
 };
+
+
+
+
+
+
 const generateCards = (data) => {
   return data
     .map((item) => {
+      const ratingStars = generateAllRating(item.rating);
       return cardTemplate
         .replace("{{image}}", item.image)
         .replace("{{category}}", item.category)
         .replace("{{topic}}", item.topic)
         .replace("{{name}}", item.name)
-        .replace("{{ratingStars}}", "⭐".repeat(Math.round(item.rating)))
+        .replace("{{ratingStars}}",ratingStars)
         .replace("{{imageExists}}", !!item.image ? "course-image" : " ");
     })
     .join("");
@@ -88,13 +96,15 @@ cardsContainer.innerHTML = generateCards(data);
 
 
 const createCards = (data) => {
+  
   const favoritesContainer = document.getElementById("favoritesContainer");
+  const ratingStars = generateAllRating(data.rating);
 favoritesContainer.innerHTML += `
 <div class="small-cards">
 <img class="img-heart" src="./images/${data.image} "alt="favorite-course">
 <div class="card-info">
   <h3>${data.topic}</h3>
-  <p>Rating: rating</p>
+  <p class="author-evaluate"> ${ratingStars}</p>
 </div>
 </div>
   `;
