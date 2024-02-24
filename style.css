@@ -373,6 +373,7 @@ footer ion-icon {
 .category li.category-topic {
   font-weight: bold;
   font-size: 16px;
+  color: var(--bg_body);
 }
 
 .category ul,
