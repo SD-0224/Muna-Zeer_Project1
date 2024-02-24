@@ -39,7 +39,7 @@ toggleButton.addEventListener("click", function () {
 const cardTemplate = `
 <div class="card-container">
 <div class="image">
-<img src="./images/{{image}}" alt="{{imageExists ? 'course image' : ''}}"></div>
+<img  src="./images/{{image}}" alt="{{imageExists ? 'course image' : ''}}"></div>
 <div class="card-content">
 <span class="category">{{category}}</span><br>
 <span class="topic">{{topic}}</span>
