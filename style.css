@@ -433,7 +433,8 @@ ul.detail-description {
   display: flex;
   color: white;
   border:none;
-  z-index: 5;
+  box-shadow: 0 2px 4px var(--lines-color); 
+
   background-color: var(--brand-secondary);
 }
 .img-card {
@@ -452,11 +453,11 @@ ul.detail-description {
 /* subTopic */
 .sub-table {
   border: 1px solid var(--lines-color);
+  box-shadow: 0 2px 4px var(--lines-color); 
   display: flex;
   justify-content: center;
-  z-index: 7;
-
 }
+
 
 .table-container {
   border-collapse: collapse;
@@ -467,7 +468,7 @@ ul.detail-description {
 }
 
 .table-container tr {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--lines-color);
   
 }
 
@@ -485,10 +486,10 @@ ul.detail-description {
   font-size: 15px;
 }
 
-.SubTopics{
+.SubTitle td {
   font-weight: bold;
   font-size: 16px;
-  margin-left: 10px;
+  padding-left: 15px;
 }
 .sub-table {
   margin: 30px;

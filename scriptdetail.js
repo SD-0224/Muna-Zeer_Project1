@@ -48,8 +48,9 @@ const generateSubTopic = (subtopicsData) => {
     subTopicHtml += `
         
     <div class="subDetail">
-    <td class="SubTopics">Html SubTopics</td>
-                <tr>
+    <tr class="SubTitle">
+    <td>Html SubTopics</td>
+    </tr>        <tr>
                     ${subtopicList}
                 </tr>
             </div>
