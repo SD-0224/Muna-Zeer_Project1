@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muna-Zeer-Project1</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito Sans"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="scriptdetail.js"></script>
+  </head>
+  <body>
+    <!-- <hr /> -->
+    <div class="container">
+      <header class="header-content">
+        <div class="header-title">Web Topics</div>
+        <div class="btns">
+          <button id="favorite-button">
+            <ion-icon name="heart-outline"></ion-icon> Favorites
+          </button>
+
+          <button id="toggleDark" class="toggleDark">
+            <ion-icon name="moon-outline"></ion-icon> Dark Mode
+          </button>
+        </div>
+      </header>
+
+      <header class="main-header">
+        <div class="triangle"></div>
+
+        <div class="triangleReverse"></div>
+      </header>
+
+      <div class="header-pg">
+        <p>
+          <span class="welcome"> Welcome to our website!</span> <br />
+          We have a new design that's fresh ,modern,and easy to use
+        </p>
+      </div>
+      <div class="middleContent">
+        <div class="detail-content" id="detailContent"></div>
+        <div class="cardDetailAbove">
+          <div class="flex-card">
+            <img class="img-card" src="./images/javascript.jpg" alt="" />
+            <h3><span  style="font-weight: bold;font-size: 12px;margin-left: 10px;">HTML by </span> <a class="teacher-name">Sarah Smith</a></h3>
+
+            <div class="semi-card">
+              <p>interested about this topic ?</p>
+              <button class="btn-add">
+                Add to Favorites <ion-icon name="heart-outline"></ion-icon>
+              </button>
+              <p class="unlimited">unlimited card</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="secondContainer">
+        <div id="subDetail" class="sub-table"></div>
+      </div>
+      <footer class="footer-detail">
+        Developed with <ion-icon name="heart"></ion-icon> &copy; 2023
+      </footer>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
